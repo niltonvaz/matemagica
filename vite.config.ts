@@ -12,6 +12,13 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
+      },
+      
+      // --- ADIÇÃO NECESSÁRIA PARA O RENDER ---
+      preview: {
+        host: true, // Permite que o Render se conecte a partir de qualquer host
+        port: 10000 // O Render espera que os serviços rodem nesta porta por padrão
       }
+      // --- FIM DA ADIÇÃO ---
     };
 });
